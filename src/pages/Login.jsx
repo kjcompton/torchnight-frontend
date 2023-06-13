@@ -9,7 +9,7 @@ function Login(props) {
     const handleSubmit = (e) => {
         e.preventDefault()
         // props.updateUser(email, password)
-        props.updateUser("kevin2@email.com", "$2b$12$4CCuge3VdUki9Wpz1.DQ9OTiiimI5/Dzoz7/H8EWzkcv/sUQX6a2u")
+        props.updateUser("kevin2@email.com", "$2b$12$tNp8MqbrdCRJbLdV0E5x1uoKIOfkLRJE2FtWZg5nVZwwh.aXzK.xK")
     }
 
     useEffect(() => {

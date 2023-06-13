@@ -35,7 +35,7 @@ function Main(props) {
                 <Route path="/signup" element={<SignUp/>}/>
 
                 # Shop
-                <Route path="/shop" element={<Shop/>}/>
+                <Route path="/shop" element={<Shop userLogged={props.userLogged} setUserLogged={props.setUserLogged}/>}/>
 
                 # Game
                 <Route path="/game" element={<Game/>}/>

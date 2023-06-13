@@ -30,8 +30,8 @@ function App() {
   if (typeof userLogged === 'object') {
     return (
       <>
-        <Header />
-        <Main userLogged={userLogged}/>
+        <Header userLogged={userLogged} />
+        <Main userLogged={userLogged} setUserLogged={setUserLogged}/>
         <Footer />
       </>
     )

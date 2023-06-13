@@ -13,6 +13,7 @@ function Login(props) {
     //   }
 
     const [form, setForm] = useState({ 
+        gold: 100,
         email: '',
         username: '',
         password: '', 

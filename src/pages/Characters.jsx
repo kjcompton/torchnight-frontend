@@ -11,6 +11,7 @@ function Characters (props) {
             const response = await fetch(URL)
             const data = await response.json()
             const foundCharacters = data.data
+            console.log(foundCharacters)
             setCharacters(foundCharacters)
         } catch (error) {
             console.log(error)
