@@ -1,5 +1,8 @@
 import { useState,useEffect } from 'react'
 import {Link} from "react-router-dom"
+import rogue from '../assets/rogue.png'
+import warrior from '../assets/warrior.png'
+import mage from '../assets/mage.png'
 
 function Characters (props) {
     const [characters, setCharacters] = useState([])
@@ -18,6 +21,19 @@ function Characters (props) {
         }
     }
 
+    const checkClass = (className) => {
+        console.log(className)
+        
+        if (className == "warrior") {
+            return <img src={warrior}/>
+        }
+        else if (className == "rogue") {
+            return rogue
+        }
+        else if (className == "mage") {
+            return mage
+        }
+    } 
     useEffect(() => {
         charactersByUser()
         console.log(props.userLogged)
@@ -25,19 +41,26 @@ function Characters (props) {
 
     return (
         <>
-        <div className="grid grid-cols-4 gap-4">
+        <Link to={`/characters/new`}><button className="newCharacterButton" type="button">New Character</button></Link>
+        <div className="grid grid-cols-4 gap-4 mt-5">
             {characters.map((character) => {
                 return (
-                    <div key={character.id}>
-                        <img src={character.img} alt={character.name} />
-                        <h1>{character.name}</h1>
-                        <h2>{character.characterClass}</h2>
-                        <Link to={`/character/${character.id}`}>View</Link>
+                    <Link key={character.id} to={`/character/${character.id}`}>
+                    <div className="character-card" key={character.id}>
+                        {console.log(character)}
+                        <img src={character.image} />
+                        <h2 className="text-left font-bold mt-3">{character.name}</h2>
+                        <div className="classText mt-3">
+                           
+                            <img src={warrior}/>
+                            <h4 className=" text-left font-light">{character.characterClass}</h4>
+                        </div>
                     </div>
+                    </Link>
                 )
             })}
         </div>
-        <Link to={`/characters/new`}><button type="button">New Character</button></Link>
+        
         </>
     )
     

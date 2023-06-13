@@ -1,7 +1,7 @@
 
 function Footer() {
     return (
-        <div className="w-screen fixed bottom-0">Footer</div>
+        <div className="w-screen fixed bottom-0"></div>
     )
 }
 
