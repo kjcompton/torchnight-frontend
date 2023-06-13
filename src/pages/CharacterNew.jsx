@@ -5,7 +5,7 @@ const CharacterNew = (props) => {
     const navigate = useNavigate()
 
     const [form, setForm] = useState({
-        id: "1",
+        id: `${props.userLogged.id}`,
         level: 1,
         xp: 1,
         hp: 10,
@@ -27,6 +27,7 @@ const CharacterNew = (props) => {
         characterClass: '',
         image: '', 
     })
+    
 
     const createCharacter = async (character) => {
         await fetch("http://127.0.0.1:8000/api/v1/characters/create", {
@@ -50,7 +51,6 @@ const CharacterNew = (props) => {
     }
 
     const handleChanges = (e) => {
-        console.log("test")
         setForm({ ...form, [e.target.name]: e.target.value})
     }
 

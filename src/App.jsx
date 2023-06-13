@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Main from './components/Main'
-import Login from './components/Login'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import LoginSignUp from './components/LoginSignUp'
 import './App.css'
 
 
@@ -25,10 +27,16 @@ function App() {
 
 
 
-  if (userLogged) {
-    return <Main userLogged={userLogged}/>
+  if (typeof userLogged === 'object') {
+    return (
+      <>
+        <Header />
+        <Main userLogged={userLogged}/>
+        <Footer />
+      </>
+    )
   } else {
-    return <Login updateUser={logIn}/>
+    return <LoginSignUp updateUser={logIn} loginMessage={loginMessage}/>
   }
 }
 

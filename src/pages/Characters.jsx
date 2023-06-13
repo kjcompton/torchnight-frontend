@@ -19,20 +19,23 @@ function Characters (props) {
 
     useEffect(() => {
         charactersByUser()
+        console.log(props.userLogged)
     }, [])
 
     return (
         <>
-        {characters.map((character) => {
-            return (
-                <div key={character.id}>
-                    <img src={character.img} alt={character.name} />
-                    <h1>{character.name}</h1>
-                    <h2>{character.characterClass}</h2>
-                    <Link to={`/character/${character.id}`}>View</Link>
-                </div>
-            )
-        })}
+        <div className="grid grid-cols-4 gap-4">
+            {characters.map((character) => {
+                return (
+                    <div key={character.id}>
+                        <img src={character.img} alt={character.name} />
+                        <h1>{character.name}</h1>
+                        <h2>{character.characterClass}</h2>
+                        <Link to={`/character/${character.id}`}>View</Link>
+                    </div>
+                )
+            })}
+        </div>
         <Link to={`/characters/new`}><button type="button">New Character</button></Link>
         </>
     )
