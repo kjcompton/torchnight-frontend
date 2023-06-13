@@ -1,6 +1,6 @@
 
 function Game() {
-    return <h1>Game</h1>
+    return <h1>Coming Soon...</h1>
 }
 
 export default Game

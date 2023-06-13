@@ -10,7 +10,8 @@ function Characters (props) {
 
     const charactersByUser = async () => {
         try {
-            const URL = `http://127.0.0.1:8000/api/v1/characters/test/${props.userLogged.id}`
+            console.log(props.userLogged.id)
+            const URL = `https://sheltered-bastion-87659.herokuapp.com/api/v1/characters/test/${props.userLogged.id}`
             const response = await fetch(URL)
             const data = await response.json()
             const foundCharacters = data.data

@@ -47,7 +47,7 @@ const CharacterNew = (props) => {
     
 
     const createCharacter = async (character) => {
-        await fetch("http://127.0.0.1:8000/api/v1/characters/create", {
+        await fetch("https://sheltered-bastion-87659.herokuapp.com/api/v1/characters/create", {
             method: "POST",
             headers: {
               'Content-Type': 'application/json'

@@ -21,7 +21,7 @@ function Login(props) {
 
 
     const signUp = async (user) => {
-        await fetch("http://127.0.0.1:8000/api/v1/users/register", {
+        await fetch("https://sheltered-bastion-87659.herokuapp.com/api/v1/users/register", {
             method: "POST",
             headers: {
               'Content-Type': 'application/json'
@@ -47,15 +47,15 @@ function Login(props) {
 
     return (
         <main>
-            <form onSubmit={handleSubmit}>
-                <h1>Sign Up</h1>
+            <form className="text-left" onSubmit={handleSubmit}>
+                <h1 className="logInSignUp">Sign Up</h1>
                 <label>Email</label>
-                <input type='text' id='email' value={form.email} name="email" onChange={handleChanges}/>
+                <input className="mt-5" type='text' id='email' value={form.email} name="email" onChange={handleChanges}/>
                 <label>Username</label>
-                <input type='text' id='username' value={form.username} name="username"  onChange={handleChanges}/>
+                <input className="mt-5" type='text' id='username' value={form.username} name="username"  onChange={handleChanges}/>
                 <label>Password</label>
-                <input type='password' id='password' value={form.password} name="password" onChange={handleChanges}/>
-                <input type='submit'value="Submit"/>
+                <input className="mt-5" type='password' id='password' value={form.password} name="password" onChange={handleChanges}/>
+                <input className="mt-5" type='submit'value="Submit"/>
             </form>
             <h2>{props.loginMessage}</h2>
         </main>

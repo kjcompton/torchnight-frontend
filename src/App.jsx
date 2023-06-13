@@ -12,7 +12,7 @@ function App() {
   const [loginMessage, setloginMessage] = useState('')
 
   const logIn = async (email, password) => {
-    const URL = `http://127.0.0.1:8000/api/v1/users/login?email=${email}&password=${password}`
+    const URL = `https://sheltered-bastion-87659.herokuapp.com/api/v1/users/login?email=${email}&password=${password}`
     const response = await fetch(URL)
     const data = await response.json()
     const foundUser = data

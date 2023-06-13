@@ -184,7 +184,7 @@ function Shop(props) {
 
 
         props.setUserLogged({...props.userLogged, ["gold"]: newGold})
-        await fetch(`http://127.0.0.1:8000/api/v1/users/${props.userLogged.id}`, {
+        await fetch(`https://sheltered-bastion-87659.herokuapp.com/api/v1/users/1`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
@@ -192,7 +192,7 @@ function Shop(props) {
             body: JSON.stringify(gold)
         })
 
-        await fetch(`http://127.0.0.1:8000/api/v1/characters/${props.userLogged.id}`, {
+        await fetch(`https://sheltered-bastion-87659.herokuapp.com/api/v1/characters/1`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
