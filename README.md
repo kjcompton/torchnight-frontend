@@ -34,18 +34,18 @@ Torchnight is a dungeon crawling turnbased roguelite ran in the browser. Users w
 ## Routes
 
 users
-GET / - see all users
-GET /userID - see specified user information 
-POST /register - registers a user if they click to sign up
-POST /login - logs in a user
-POST /logout - logs the user out
+* GET / - see all users
+* GET /userID - see specified user information 
+* POST /register - registers a user if they click to sign up
+* POST /login - logs in a user
+* POST /logout - logs the user out
 
 characters
-GET / - returns back all of the characters that belong to that user
-POST / - creates a character
-GET /characterID - finds the specified character
-PUT /characterID - updates the character
-DELETE /characterID - deletes the character
+* GET / - returns back all of the characters that belong to that user
+* POST / - creates a character
+* GET /characterID - finds the specified character
+* PUT /characterID - updates the character
+* DELETE /characterID - deletes the character
 
 ## Routes
 * Finish Game Portion
