@@ -30,3 +30,37 @@ Torchnight is a dungeon crawling turnbased roguelite ran in the browser. Users w
 ![shop](https://media.git.generalassemb.ly/user/46962/files/897529a6-b50d-44db-86a5-97826ee5fffb)
 ![item](https://media.git.generalassemb.ly/user/46962/files/6ed993e3-35ec-4e44-909b-e7d1d7e9e508)
 ![game](https://media.git.generalassemb.ly/user/46962/files/97865435-fdd4-4bcd-a413-08c09b488359)
+
+## Routes
+
+users
+GET / - see all users
+GET /userID - see specified user information 
+POST /register - registers a user if they click to sign up
+POST /login - logs in a user
+POST /logout - logs the user out
+
+characters
+GET / - returns back all of the characters that belong to that user
+POST / - creates a character
+GET /characterID - finds the specified character
+PUT /characterID - updates the character
+DELETE /characterID - deletes the character
+
+## Routes
+* Finish Game Portion
+- Mobile Responsiveness
+- Canvas for dungion tiles/map
+- Character classes with different attributes
+- Skills to use in and outside of combat based on character classes
+- Dungeon obstacles such as water, holes, spikes etc
+- Dungeon interactions such as doors, switches, secret passages
+- More attributes
+- level up skill/perk tree
+- Purchase equipment such as armor, boots, gloves etc that have different properties
+- Pick up items/equipment from dungeons
+- Descend to different layers of dungeon instead of escaping where there is higher risk but higher rewards
+- Upgrade items and equipment
+- Combat History
+- Animations
+- Sounds
